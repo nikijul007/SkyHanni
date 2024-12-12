@@ -4,9 +4,9 @@ import at.hannibal2.skyhanni.api.event.HandleEvent
 import at.hannibal2.skyhanni.events.GardenToolChangeEvent
 import at.hannibal2.skyhanni.skyhannimodule.SkyHanniModule
 import at.hannibal2.skyhanni.utils.LorenzColor
-import at.hannibal2.skyhanni.utils.LorenzUtils
-import at.hannibal2.skyhanni.utils.LorenzUtils.isMousematSign
 import at.hannibal2.skyhanni.utils.RenderUtils.renderRenderables
+import at.hannibal2.skyhanni.utils.SignUtils
+import at.hannibal2.skyhanni.utils.SignUtils.isMousematSign
 import at.hannibal2.skyhanni.utils.renderables.Renderable
 import io.github.notenoughupdates.moulconfig.observer.Property
 import net.minecraft.client.gui.inventory.GuiEditSign
@@ -78,8 +78,8 @@ object GardenOptimalAngles {
     }
 
     private fun setAngles(angles: Pair<Float, Float>) {
-        LorenzUtils.setTextIntoSign("${angles.first}", 0)
-        LorenzUtils.setTextIntoSign("${angles.second}", 3)
+        SignUtils.setTextIntoSign("${angles.first}", 0)
+        SignUtils.setTextIntoSign("${angles.second}", 3)
     }
 
     private fun CropType.getAngles() = getConfig().let { Pair(it.first.get(), it.second.get()) }
