@@ -71,13 +71,8 @@ object SignUtils {
 
     fun GuiEditSign.isRancherSign(): Boolean {
         if (this !is AccessorGuiEditSign) return false
-
-        val tileSign = (this as AccessorGuiEditSign).tileSign
-        return (
-            tileSign.signText[1].unformattedText.removeColor() == "^^^^^^" &&
-                tileSign.signText[2].unformattedText.removeColor() == "Set your" &&
-                tileSign.signText[3].unformattedText.removeColor() == "speed cap!"
-            )
+        val signText = (this as AccessorGuiEditSign).tileSign.signText.map { it.unformattedText.removeColor() }
+        return signText[1] == "^^^^^^" && signText[2] == "Set your" && signText[3] == "speed cap!"
     }
 
     fun GuiEditSign.isMousematSign(): Boolean {
