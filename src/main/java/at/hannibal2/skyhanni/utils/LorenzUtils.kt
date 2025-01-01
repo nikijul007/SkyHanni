@@ -71,7 +71,7 @@ object LorenzUtils {
             val never = SkyHanniMod.feature.dev.debug.neverFunnyTime
             val result = (!never && (always || itsTime))
             if (previousApril != result) {
-                ModifyVisualWords.textCache.clear()
+                ModifyVisualWords.update()
             }
             previousApril = result
             return result
@@ -273,8 +273,7 @@ object LorenzUtils {
     }
 
     inline fun <reified T : Enum<T>> enumValueOf(name: String) =
-        enumValueOfOrNull<T>(name)
-            ?: error("Unknown enum constant for ${enumValues<T>().first().name.javaClass.simpleName}: '$name'")
+        enumValueOfOrNull<T>(name) ?: error("Unknown enum constant for ${enumValues<T>().first().name.javaClass.simpleName}: '$name'")
 
     inline fun <reified T : Enum<T>> enumJoinToPattern(noinline transform: (T) -> CharSequence = { it.name }) =
         enumValues<T>().joinToString("|", transform = transform)
@@ -288,8 +287,7 @@ object LorenzUtils {
         FMLCommonHandler.instance().handleExit(-1)
     }
 
-    fun inMiningIsland() = IslandType.GOLD_MINES.isInIsland() ||
-        IslandType.DEEP_CAVERNS.isInIsland() || MiningAPI.inAdvancedMiningIsland()
+    fun inMiningIsland() = IslandType.GOLD_MINES.isInIsland() || IslandType.DEEP_CAVERNS.isInIsland() || MiningAPI.inAdvancedMiningIsland()
 
     fun isBetaVersion() = UpdateManager.isCurrentlyBeta()
 
