@@ -6,7 +6,8 @@ import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
 import io.github.notenoughupdates.moulconfig.observer.Property
 
 class CustomAnglesConfig {
-    //Cactus
+
+    // Cactus
     @Expose
     @ConfigOption(name = "Cactus Yaw", desc = "Set Yaw for cactus farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -17,7 +18,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var cactusPitch: Property<Float> = Property.of(0f)
 
-    //Carrot
+    // Carrot
     @Expose
     @ConfigOption(name = "Carrot Yaw", desc = "Set Yaw for carrot farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -28,7 +29,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var carrotPitch: Property<Float> = Property.of(2.8f)
 
-    //Cocoa Beans
+    // Cocoa Beans
     @Expose
     @ConfigOption(name = "Cocoa Beans Yaw", desc = "Set Yaw for cocoa bean farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -39,7 +40,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var cocoaBeansPitch: Property<Float> = Property.of(-45f)
 
-    //Melon
+    // Melon
     @Expose
     @ConfigOption(name = "Melon Yaw", desc = "Set Yaw for melon farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -50,7 +51,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var melonPitch: Property<Float> = Property.of(-58.5f)
 
-    //Mushroom
+    // Mushroom
     @Expose
     @ConfigOption(name = "Mushroom Yaw", desc = "Set Yaw for mushroom farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -61,7 +62,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var mushroomPitch: Property<Float> = Property.of(0f)
 
-    //Nether Wart
+    // Nether Wart
     @Expose
     @ConfigOption(name = "Nether Wart Yaw", desc = "Set Yaw for nether wart farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -72,7 +73,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var netherWartPitch: Property<Float> = Property.of(0f)
 
-    //Potato
+    // Potato
     @Expose
     @ConfigOption(name = "Potato Yaw", desc = "Set Yaw for potato farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -83,7 +84,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var potatoPitch: Property<Float> = Property.of(2.8f)
 
-    //Pumpkin
+    // Pumpkin
     @Expose
     @ConfigOption(name = "Pumpkin Yaw", desc = "Set Yaw for pumpkin farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -94,7 +95,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var pumpkinPitch: Property<Float> = Property.of(-58.5f)
 
-    //Sugar Cane
+    // Sugar Cane
     @Expose
     @ConfigOption(name = "Sugar Cane Yaw", desc = "Set Yaw for sugar cane farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
@@ -105,7 +106,7 @@ class CustomAnglesConfig {
     @ConfigEditorSlider(minValue = -90f, maxValue = 90f, minStep = 0.1f)
     var sugarCanePitch: Property<Float> = Property.of(0f)
 
-    //Wheat
+    // Wheat
     @Expose
     @ConfigOption(name = "Wheat Yaw", desc = "Set Yaw for wheat farming.")
     @ConfigEditorSlider(minValue = -180f, maxValue = 180f, minStep = 0.1f)
