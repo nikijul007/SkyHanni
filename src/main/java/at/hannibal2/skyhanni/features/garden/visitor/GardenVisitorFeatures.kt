@@ -653,7 +653,7 @@ object GardenVisitorFeatures {
 
     private fun hideExtraGuis() = GardenAPI.hideExtraGuis() && !VisitorAPI.inInventory
 
-    @SubscribeEvent
+    @HandleEvent
     fun onRenderOverlay(event: GuiRenderEvent) {
         if (!config.shoppingList.display) return
 
