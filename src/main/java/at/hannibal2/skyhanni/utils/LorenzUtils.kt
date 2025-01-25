@@ -8,7 +8,7 @@ import at.hannibal2.skyhanni.data.Perk
 import at.hannibal2.skyhanni.data.TitleManager
 import at.hannibal2.skyhanni.events.GuiContainerEvent
 import at.hannibal2.skyhanni.features.misc.visualwords.ModifyVisualWords
-import at.hannibal2.skyhanni.features.nether.kuudra.KuudraAPI
+import at.hannibal2.skyhanni.features.nether.kuudra.KuudraApi
 import at.hannibal2.skyhanni.test.SkyBlockIslandTest
 import at.hannibal2.skyhanni.test.TestBingo
 import at.hannibal2.skyhanni.utils.ItemUtils.getItemCategoryOrNull
@@ -212,10 +212,10 @@ object LorenzUtils {
         tips: List<String> = emptyList(),
     ) {
         val onClick = {
-            if ((System.currentTimeMillis() - lastButtonClicked) > 150) { // funny thing happen if I don't do that
+            if ((System.currentTimeMillis() - ChatUtils.lastButtonClicked) > 150) { // funny thing happen if I don't do that
                 onChange()
                 SoundUtils.playClickSound()
-                lastButtonClicked = System.currentTimeMillis()
+                ChatUtils.lastButtonClicked = System.currentTimeMillis()
             }
         }
         add(

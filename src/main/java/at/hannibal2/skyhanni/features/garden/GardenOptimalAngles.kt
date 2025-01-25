@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 @SkyHanniModule
 object GardenOptimalAngles {
 
-    private val config get() = GardenAPI.config.optimalAngles
+    private val config get() = GardenApi.config.optimalAngles
 
     private val configCustomAngles get() = config.customAngles
 
@@ -100,5 +100,5 @@ object GardenOptimalAngles {
 
     }
 
-    private fun isSqueakyMousematEnabled() = GardenAPI.inGarden() && config.signEnabled
+    private fun isSqueakyMousematEnabled() = GardenApi.inGarden() && config.signEnabled
 }
