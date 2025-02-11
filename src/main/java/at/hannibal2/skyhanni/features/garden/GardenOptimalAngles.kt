@@ -97,7 +97,6 @@ object GardenOptimalAngles {
             CropType.SUGAR_CANE -> Pair(sugarCaneYaw, sugarCanePitch)
             CropType.MUSHROOM -> Pair(mushroomYaw, mushroomPitch)
         }
-
     }
 
     private fun isSqueakyMousematEnabled() = GardenApi.inGarden() && config.signEnabled
